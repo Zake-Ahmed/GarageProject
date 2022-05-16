@@ -43,4 +43,18 @@ public class Garage {
 
 	}
 
+	public String removeClass(String clas) {
+		List<Vehicle> vClass = new ArrayList<>();
+		for (int i = 0; i < garage.size(); i += 1) {
+
+			if (garage.get(i).getClas() == clas) {
+				vClass.add(garage.get(i));
+
+			}
+
+		}
+		garage.removeAll(vClass);
+		return "Garage cleared of " + clas + "s";
+
+	}
 }
